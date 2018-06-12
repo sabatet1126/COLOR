@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		853099C820BD5BBB00080BE8 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853099C720BD5BBB00080BE8 /* ColorViewController.swift */; };
 		85BDBA0020AAED42004B3C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BDB9FF20AAED42004B3C9B /* AppDelegate.swift */; };
 		85BDBA0220AAED42004B3C9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BDBA0120AAED42004B3C9B /* ViewController.swift */; };
 		85BDBA0520AAED42004B3C9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BDBA0320AAED42004B3C9B /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		85BDBA0A20AAED42004B3C9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BDBA0820AAED42004B3C9B /* LaunchScreen.storyboard */; };
 		85BDBA1520AAED42004B3C9B /* GoiUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BDBA1420AAED42004B3C9B /* GoiUpTests.swift */; };
 		85BDBA2020AAED42004B3C9B /* GoiUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BDBA1F20AAED42004B3C9B /* GoiUpUITests.swift */; };
+		85BDBA2E20AAED74004B3C9B /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BDBA2D20AAED74004B3C9B /* Word.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		853099C720BD5BBB00080BE8 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		85BDB9FC20AAED42004B3C9B /* GoiUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoiUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BDB9FF20AAED42004B3C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85BDBA0120AAED42004B3C9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		85BDBA1B20AAED42004B3C9B /* GoiUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoiUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BDBA1F20AAED42004B3C9B /* GoiUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoiUpUITests.swift; sourceTree = "<group>"; };
 		85BDBA2120AAED42004B3C9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85BDBA2D20AAED74004B3C9B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 			children = (
 				85BDB9FF20AAED42004B3C9B /* AppDelegate.swift */,
 				85BDBA0120AAED42004B3C9B /* ViewController.swift */,
+				85BDBA2D20AAED74004B3C9B /* Word.swift */,
 				85BDBA0320AAED42004B3C9B /* Main.storyboard */,
+				853099C720BD5BBB00080BE8 /* ColorViewController.swift */,
 				85BDBA0620AAED42004B3C9B /* Assets.xcassets */,
 				85BDBA0820AAED42004B3C9B /* LaunchScreen.storyboard */,
 				85BDBA0B20AAED42004B3C9B /* Info.plist */,
@@ -261,6 +267,8 @@
 			files = (
 				85BDBA0220AAED42004B3C9B /* ViewController.swift in Sources */,
 				85BDBA0020AAED42004B3C9B /* AppDelegate.swift in Sources */,
+				853099C820BD5BBB00080BE8 /* ColorViewController.swift in Sources */,
+				85BDBA2E20AAED74004B3C9B /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
