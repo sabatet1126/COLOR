@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var test: UIView!
     @IBOutlet weak var test2: UIView!
     @IBOutlet weak var test3: UIView!
+    @IBOutlet var Back: UIView!
     @IBOutlet weak var Brightness: UISlider!
     @IBOutlet weak var Saturation: UISlider!
     @IBOutlet weak var Hue: UISlider!
@@ -27,13 +28,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var Line: UISlider!
     @IBOutlet var Button: UIButton!
     @IBOutlet var moji: UILabel!
+    @IBOutlet var moji2: UILabel!
+    @IBOutlet var moji3: UILabel!
    
     
     //  let color :UIColor = UIColor(hue: 10.0,saturation: 10.7,brightness: CGFloat,alpha: CGFloat)
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+     //   test.layer.cornerRadius = 0.12*(UIScreen.main.bounds.size.width)
+    //    test2.layer.cornerRadius = 0.12*(UIScreen.main.bounds.size.width)
+    //    test3.layer.cornerRadius = 0.12*(UIScreen.main.bounds.size.width)
+       // test3.layer.cornerRadius = 0.12*(UIScreen.main.bounds.size.width)
 //        Brightness.addTarget(self, action: "BsliderChanged:", for: UIControlEvents.valueChanged)
 //        Saturation.addTarget(self, action: "SsliderChanged:", for: UIControlEvents.valueChanged)
 //        Hue.addTarget(self, action: "HsliderChanged:", for: UIControlEvents.valueChanged)
@@ -47,7 +53,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func LinesliderChanged(_ sender: UISlider){
+        L = Double(sender.value)
+        test.layer.cornerRadius = CGFloat(L)*UIScreen.main.bounds.size.width
+        test2.layer.cornerRadius = CGFloat(L)*UIScreen.main.bounds.size.width
+        test3.layer.cornerRadius = CGFloat(L)*UIScreen.main.bounds.size.width
+        print(sender.value)
+    }
     @IBAction func hoge() {
        // print(sender.value)
         test.backgroundColor = UIColor(hue: CGFloat(H),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
@@ -65,10 +77,16 @@ class ViewController: UIViewController {
         test.backgroundColor = UIColor(hue: CGFloat(H),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
         test2.backgroundColor = UIColor(hue: CGFloat(C2),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
         test3.backgroundColor = UIColor(hue: CGFloat(C3),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
-        if B <= 50 {
-            moji.textColor = UIColor(hue:217,saturation:1,brightness:100,alpha: 1.0)
+        if B <= 0.7 {
+            moji.textColor = UIColor(hue:0.2,saturation:0.1,brightness:0.9,alpha: 1.0)
+            moji2.textColor = UIColor(hue:0.2,saturation:0.1,brightness:0.9,alpha: 1.0)
+            moji3.textColor = UIColor(hue:0.2,saturation:0.1,brightness:0.9,alpha: 1.0)
+           
         }else{
-            moji.textColor = UIColor(hue:217,saturation:98,brightness:9,alpha: 1.0)
+            moji.textColor = UIColor(hue:0.2,saturation:0.9,brightness:0.1,alpha: 1.0)
+            moji2.textColor = UIColor(hue:0.2,saturation:0.9,brightness:0.1,alpha: 1.0)
+            moji3.textColor = UIColor(hue:0.2,saturation:0.9,brightness:0.1,alpha: 1.0)
+            
         }
         print(B,"ぶらいとねしゅ")
         print(sender.value)
@@ -120,13 +138,7 @@ class ViewController: UIViewController {
         test3.backgroundColor = UIColor(hue: CGFloat(C3),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
     }
     
-    @IBAction func LinesliderChanged(_ sender: UISlider){
-        if B <= 50 {
-            moji.textColor = UIColor(hue:217,saturation:1,brightness:100,alpha: 1.0)//赤しか出ない！修正修正！！
-        }else{
-            moji.textColor = UIColor(hue:217,saturation:98,brightness:9,alpha: 1.0)
-        }
-    }
+    
     
 }
 
