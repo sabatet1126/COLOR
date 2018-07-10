@@ -1,16 +1,15 @@
 //
-//  ViewController.swift
+//  SLIDERViewController.swift
 //  GoiUp
 //
-//  Created by 藤田麻里 on 2018/05/15.
+//  Created by 藤田麻里 on 2018/07/03.
 //  Copyright © 2018年 藤田麻里. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    /*public var pageMenu : CAPSPageMenu?
-    
+class SLIDERViewController: UIViewController {
+
     var S:Double = Double(0.00)
     var B:Double = Double(0.00)
     var H:Double = Double(0.00)
@@ -18,9 +17,7 @@ class ViewController: UIViewController {
     var C3:Double = Double(0.00)
     var L:Double = Double(0.00)
     
-    @IBOutlet weak var test: UIView!
-    @IBOutlet weak var test2: UIView!
-    @IBOutlet weak var test3: UIView!
+   
     @IBOutlet var Back: UIView!
     @IBOutlet weak var Brightness: UISlider!
     @IBOutlet weak var Saturation: UISlider!
@@ -28,68 +25,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var color: UISlider!
     @IBOutlet weak var Line: UISlider!
     @IBOutlet var Button: UIButton!
-    @IBOutlet var moji: UILabel!
-    @IBOutlet var moji2: UILabel!
-    @IBOutlet var moji3: UILabel!
    
     
-    //  let color :UIColor = UIColor(hue: 10.0,saturation: 10.7,brightness: CGFloat,alpha: CGFloat)
     override func viewDidLoad() {
-        super.viewDidLoad(animated)
-        self.title = "PAGE MENU"
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orange]
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<-", style: UIBarButtonItemStyle.done, target: self, action: #selector(ViewController.didTapGoToLeft))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "->", style: UIBarButtonItemStyle.done, target: self, action: #selector(ViewController.didTapGoToRight))
-        
-        var controllerArray : [UIViewController] = []
-        let controller1 : TestTableViewController = TestTableViewController(nibName: "TestTableViewController", bundle: nil)
-        controller1.title = "スライダー"
-        controllerArray.append(controller1)
-        let controller2 : TestCollectionViewController = TestCollectionViewController(nibName: "TestCollectionViewController", bundle: nil)
-        controller2.title = "数値"
-        controllerArray.append(controller2)
-        let controller3 : TestViewController = TestViewController(nibName: "TestViewController", bundle: nil)
-        controller3.title = "気分"
-        controllerArray.append(controller3)
-        
-        let parameters: [CAPSPageMenuOption] = [
-            .scrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
-            .viewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
-            .selectionIndicatorColor(UIColor.orange),
-            .bottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
-            .menuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
-            .menuHeight(40.0),
-            .menuItemWidth(90.0),
-            .centerMenuItems(true)
-            ]
-            pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
-            
-            self.addChildViewController(pageMenu!)
-            self.view.addSubview(pageMenu!.view)
-            
-            pageMenu!.didMove(toParentViewController: self)
-        ]
-        // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
-    
-    func didTapGoToLeft() {
-        let currentIndex = pageMenu!.currentPageIndex
-        
-        if currentIndex > 0 {
-            pageMenu!.moveToPage(currentIndex - 1)
-        }
-    }
-    
-    func didTapGoToRight() {
-        let currentIndex = pageMenu!.currentPageIndex
-        
-        if currentIndex < pageMenu!.controllerArray.count {
-            pageMenu!.moveToPage(currentIndex + 1)
-        }
-    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -102,7 +45,7 @@ class ViewController: UIViewController {
         print(sender.value)
     }
     @IBAction func hoge() {
-       // print(sender.value)
+        // print(sender.value)
         test.backgroundColor = UIColor(hue: CGFloat(H),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
     }
     @IBAction func SsliderChanged(_ sender: UISlider) {
@@ -122,7 +65,7 @@ class ViewController: UIViewController {
             moji.textColor = UIColor(hue:0.2,saturation:0.1,brightness:0.9,alpha: 1.0)
             moji2.textColor = UIColor(hue:0.2,saturation:0.1,brightness:0.9,alpha: 1.0)
             moji3.textColor = UIColor(hue:0.2,saturation:0.1,brightness:0.9,alpha: 1.0)
-           
+            
         }else{
             moji.textColor = UIColor(hue:0.2,saturation:0.9,brightness:0.1,alpha: 1.0)
             moji2.textColor = UIColor(hue:0.2,saturation:0.9,brightness:0.1,alpha: 1.0)
@@ -178,8 +121,15 @@ class ViewController: UIViewController {
         test2.backgroundColor = UIColor(hue: CGFloat(C2),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
         test3.backgroundColor = UIColor(hue: CGFloat(C3),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
     }
-    
-    
-    */
-}
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
