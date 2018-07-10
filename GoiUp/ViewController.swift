@@ -8,7 +8,62 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
+    
+    static var S:Double = Double(0.00)
+    static var B:Double = Double(0.00)
+    static var H:Double = Double(0.00)
+    static var C2:Double = Double(0.00)
+    static var C3:Double = Double(0.00)
+    static var L:Double = Double(0.00)
+
+    @IBOutlet  weak var test: UIView!
+    @IBOutlet  weak var test2: UIView!
+    @IBOutlet  weak var test3: UIView!
+    @IBOutlet  var moji: UILabel!
+    @IBOutlet  var moji2: UILabel!
+    @IBOutlet  var moji3: UILabel!
+    @IBOutlet  var Back: UIView!
+    // ContainerView に Embed した UIPageViewController のインスタンスを保持する
+    var pageViewController: UIPageViewController?
+    
+    // ページングして表示させる ViewControllerを保持する
+    var vcArray = [Any]()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // ContainerView に Embed した UIPageViewController を取得する
+        pageViewController = childViewControllers[0] as? UIPageViewController
+        pageViewController!.dataSource = self
+        
+        pageViewController?.setViewControllers([getFirst()], direction: .forward, animated: true, completion: nil)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    static func renew(){
+        test.backgroundColor = UIColor(hue: CGFloat(H),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
+        test2.backgroundColor = UIColor(hue: CGFloat(C2),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
+        test3.backgroundColor = UIColor(hue: CGFloat(C3),saturation: CGFloat(S),brightness: CGFloat(B),alpha: 1.0)
+        test.layer.cornerRadius = CGFloat(L)*UIScreen.main.bounds.size.width
+        test2.layer.cornerRadius = CGFloat(L)*UIScreen.main.bounds.size.width
+        test3.layer.cornerRadius = CGFloat(L)*UIScreen.main.bounds.size.width
+        if B <= 0.7 {
+            moji.textColor = UIColor(hue:0.2,saturation:0.1,brightness:0.9,alpha: 1.0)
+            moji2.textColor = UIColor(hue:0.2,saturation:0.1,brightness:0.9,alpha: 1.0)
+            moji3.textColor = UIColor(hue:0.2,saturation:0.1,brightness:0.9,alpha: 1.0)
+            
+        }else{
+            moji.textColor = UIColor(hue:0.2,saturation:0.9,brightness:0.1,alpha: 1.0)
+            moji2.textColor = UIColor(hue:0.2,saturation:0.9,brightness:0.1,alpha: 1.0)
+            moji3.textColor = UIColor(hue:0.2,saturation:0.9,brightness:0.1,alpha: 1.0)
+            
+        }
+    }
+
     /*public var pageMenu : CAPSPageMenu?
     
     var S:Double = Double(0.00)
@@ -18,19 +73,8 @@ class ViewController: UIViewController {
     var C3:Double = Double(0.00)
     var L:Double = Double(0.00)
     
-    @IBOutlet weak var test: UIView!
-    @IBOutlet weak var test2: UIView!
-    @IBOutlet weak var test3: UIView!
-    @IBOutlet var Back: UIView!
-    @IBOutlet weak var Brightness: UISlider!
-    @IBOutlet weak var Saturation: UISlider!
-    @IBOutlet weak var Hue: UISlider!
-    @IBOutlet weak var color: UISlider!
-    @IBOutlet weak var Line: UISlider!
-    @IBOutlet var Button: UIButton!
-    @IBOutlet var moji: UILabel!
-    @IBOutlet var moji2: UILabel!
-    @IBOutlet var moji3: UILabel!
+    
+   
    
     
     //  let color :UIColor = UIColor(hue: 10.0,saturation: 10.7,brightness: CGFloat,alpha: CGFloat)
@@ -181,5 +225,42 @@ class ViewController: UIViewController {
     
     
     */
+}
+
+extension ViewController : UIPageViewControllerDataSource {
+    
+    func getFirst() -> FirstViewController {
+        return storyboard!.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
+    }
+    
+    func getSecond() -> SecondViewController {
+        return storyboard!.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+    }
+    
+    func getThird() -> ThirdViewController {
+        return storyboard!.instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        
+        if viewController.isKind(of:ThirdViewController.self){
+            return getSecond()
+        }else if viewController.isKind(of:SecondViewController.self){
+            return getFirst()
+        }else{
+            return nil
+        }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        
+        if viewController.isKind(of: FirstViewController.self){
+            return getSecond()
+        }else if viewController.isKind(of: SecondViewController.self){
+            return getThird()
+        }else{
+            return nil
+        }
+    }
 }
 

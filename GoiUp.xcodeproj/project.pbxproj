@@ -18,6 +18,9 @@
 		85BDBA1520AAED42004B3C9B /* GoiUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BDBA1420AAED42004B3C9B /* GoiUpTests.swift */; };
 		85BDBA2020AAED42004B3C9B /* GoiUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BDBA1F20AAED42004B3C9B /* GoiUpUITests.swift */; };
 		85BDBA2E20AAED74004B3C9B /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BDBA2D20AAED74004B3C9B /* Word.swift */; };
+		AA6B0CA920F4BB1700CF3081 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B0CA820F4BB1700CF3081 /* FirstViewController.swift */; };
+		AA6B0CAB20F4BB2800CF3081 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B0CAA20F4BB2800CF3081 /* SecondViewController.swift */; };
+		AA6B0CAD20F4BB5100CF3081 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B0CAC20F4BB5100CF3081 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		85BDBA2D20AAED74004B3C9B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		8C3BA87B713710E963AB027E /* Pods-GoiUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoiUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoiUp/Pods-GoiUp.release.xcconfig"; sourceTree = "<group>"; };
 		95D1057C40E0FDFE0C2909CE /* Pods_GoiUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoiUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA6B0CA820F4BB1700CF3081 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		AA6B0CAA20F4BB2800CF3081 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		AA6B0CAC20F4BB5100CF3081 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,9 @@
 				85BDB9FF20AAED42004B3C9B /* AppDelegate.swift */,
 				85BDBA0120AAED42004B3C9B /* ViewController.swift */,
 				859753CC20EB861C009E1C15 /* SLIDERViewController.swift */,
+				AA6B0CA820F4BB1700CF3081 /* FirstViewController.swift */,
+				AA6B0CAA20F4BB2800CF3081 /* SecondViewController.swift */,
+				AA6B0CAC20F4BB5100CF3081 /* ThirdViewController.swift */,
 				85BDBA2D20AAED74004B3C9B /* Word.swift */,
 				85BDBA0320AAED42004B3C9B /* Main.storyboard */,
 				853099C720BD5BBB00080BE8 /* ColorViewController.swift */,
@@ -352,7 +361,10 @@
 				85BDBA0220AAED42004B3C9B /* ViewController.swift in Sources */,
 				85BDBA0020AAED42004B3C9B /* AppDelegate.swift in Sources */,
 				853099C820BD5BBB00080BE8 /* ColorViewController.swift in Sources */,
+				AA6B0CA920F4BB1700CF3081 /* FirstViewController.swift in Sources */,
+				AA6B0CAB20F4BB2800CF3081 /* SecondViewController.swift in Sources */,
 				859753CD20EB861D009E1C15 /* SLIDERViewController.swift in Sources */,
+				AA6B0CAD20F4BB5100CF3081 /* ThirdViewController.swift in Sources */,
 				85BDBA2E20AAED74004B3C9B /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

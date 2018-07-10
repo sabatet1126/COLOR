@@ -1,17 +1,20 @@
 //
-//  SLIDERViewController.swift
+//  ThirdViewController.swift
 //  GoiUp
 //
-//  Created by 藤田麻里 on 2018/07/03.
+//  Created by 橋詰明宗 on 2018/07/10.
 //  Copyright © 2018年 藤田麻里. All rights reserved.
 //
 
 import UIKit
 
-class SLIDERViewController: UIViewController {
+class ThirdViewController: UIViewController {
 
-    
-    @IBOutlet var Back: UIView!
+    @IBOutlet  var hueP: UILabel!
+    @IBOutlet  var BLigP: UILabel!
+    @IBOutlet  var SaP: UILabel!
+    @IBOutlet  var CorP: UILabel!
+    @IBOutlet  var LineP: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +27,7 @@ class SLIDERViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
-    
+
     /*
     // MARK: - Navigation
 
